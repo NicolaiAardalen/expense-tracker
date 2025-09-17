@@ -8,7 +8,7 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCvalPGM6fb9BMqtY-Acgr4Q9PcRDUGypc",
+  apiKey: "private",
   authDomain: "expense-tracker-dc0fd.firebaseapp.com",
   projectId: "expense-tracker-dc0fd",
   storageBucket: "expense-tracker-dc0fd.firebasestorage.app",
