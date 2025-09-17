@@ -1,4 +1,4 @@
-import React from 'react'
+import './header.css';
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../contexts/authContexts'
 
@@ -16,9 +16,21 @@ const Header = () => {
         <nav>
             {userLoggedIn ? (
                 <>
-                    <button onClick={handleLogout}>Logout</button>
-                    <Link to={'/home'}>Home</Link>
-                    <Link to={'/settings'}>Settings</Link>
+                    <div className='firstDiv'>
+                        <div>
+                            <button className='header-links' onClick={handleLogout}>Logout</button>
+                        </div>
+                        <div className='secondDiv'>
+                            <Link className='header-links' to={'/home'}>Home</Link>
+                            <Link className='header-links' to={'/analytics'}>Analytics</Link>
+                            <Link className='header-links' to={'/budget'}>Budget</Link>
+                            <Link className='header-links' to={'/expenses'}>Expenses</Link>
+                            <Link className='header-links' to={'/income'}>Income</Link>
+                        </div>
+                        <div>
+                            <Link className='header-links' to={'/settings'}>Settings</Link>
+                        </div>
+                    </div>
                 </>
             ) : (
                 <>
@@ -28,6 +40,6 @@ const Header = () => {
             )}
         </nav>
     )
-}
+};
 
-export default Header
+export default Header;

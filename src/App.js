@@ -1,11 +1,16 @@
 import './App.css';
+import { Routes, Route } from "react-router-dom";
 import Header from './components/header';
 import Home from './components/home';
 import Login from './components/auth/login';
 import Register from './components/auth/register';
-import { Routes, Route } from "react-router-dom";
 import Settings from './components/settings';
 import PasswordChange from './components/passwordChange';
+import PasswordReset from './components/passwordReset';
+import Analytics from './components/analytics';
+import Budget from './components/budget';
+import Expenses from './components/expenses';
+import Income from './components/income';
 
 function App() {
   return (
@@ -18,6 +23,11 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/passwordChange" element={<PasswordChange/>}/>
+        <Route path="/passwordReset" element={<PasswordReset/>}/>
+        <Route path="/analytics" element={<Analytics/>}/>
+        <Route path="/expenses" element={<Expenses/>}/>
+        <Route path="/budget" element={<Budget/>}/>
+        <Route path="/income" element={<Income/>}/>
       </Routes>
     </>
   );
